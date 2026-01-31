@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  modest_torvalds:
+    image: prvi_zadatak:1.0
+    ports:
+      - "${PORT_1}:${PORT_1}"
+    networks:
+      - interna_mreza
+
+  socialAPI:
+    image: drugi_zadatak:1.0
+    ports:
+      - "${PORT_2}:${PORT_2}"
+    networks:
+      - interna_mreza
+
+networks:
+  interna_mreza:
+    driver: bridge
